@@ -37,14 +37,19 @@ public class Demo {
         BaiTap1 bt = new BaiTap1();
         bt.setMauSo(20);
         bt.setTuSo(4);
-        bt.inPhanSo();
         bt.rutGon();
+        bt.inPhanSo();
+
 
         BaiTap1 bt1 = new BaiTap1();
         bt1.setMauSo(8);
         bt1.setTuSo(4);
-        bt1.inPhanSo();
         bt1.rutGon();
+        bt1.inPhanSo();
+
+        BaiTap1 tong = bt.add(bt1);
+        tong.rutGon();
+        tong.inPhanSo();
 
 
 

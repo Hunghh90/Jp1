@@ -31,21 +31,49 @@ public class BaiTap1 {
 
     public void inPhanSo(){
         if(! ktPhanSo()) System.out.println("Mau so phai khac 0");
-        System.out.println(tuSo+"/"+mauSo);
+        System.out.println(getTuSo()+"/"+getMauSo());
     }
-    public int timUSCLN(int getTuSo, int getMauSo) {
-        if(! ktPhanSo()) System.out.println("Mau so phai khac 0");
-        while (getTuSo != getMauSo) {
-            if (getTuSo > getMauSo) {
-                getTuSo -= getMauSo;
-            } else {
-                getMauSo -= getTuSo;
+
+    public void rutGon(){
+
+        int ucln = 1;
+        for(int i=Math.min(Math.abs(tuSo),Math.abs(mauSo));i>=1;i--){
+            if(tuSo%i==0 && mauSo%i==0){
+                ucln = i;
+                break;
             }
         }
-        return getTuSo;
+        setTuSo(tuSo/ucln);
+        setMauSo(mauSo/ucln);
     }
-    public void rutGon(){
-        int i = timUSCLN(this.getTuSo(),this.getMauSo());
-        System.out.println(tuSo/i+"/"+mauSo/i);
+
+    public void nghichDao(){
+    int tmp = tuSo;
+    tuSo = mauSo;
+    mauSo = tmp;
     }
+
+     public BaiTap1 add(BaiTap1 f){
+        BaiTap1 tong = new BaiTap1();
+        tong.setTuSo(this.getTuSo()*f.getMauSo() + this.getMauSo()* f.getTuSo()) ;
+        tong.setMauSo(this.getMauSo()*f.getMauSo());
+        tong.rutGon();
+        return tong;
+        }
+
+     public BaiTap1 sub(BaiTap1 f){
+         BaiTap1 hieu = new BaiTap1();
+         hieu.tuSo = this.tuSo*f.mauSo - this.mauSo* f.tuSo;
+         hieu.mauSo = this.mauSo*f.mauSo;
+         hieu.rutGon();
+         return hieu;
+        }
+
+     public void mul(){
+
+        }
+
+     public void div(){
+
+        }
 }
