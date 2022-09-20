@@ -1,5 +1,7 @@
 package session1;
 
+import java.util.Scanner;
+
 public class Demo {
     public static void main(String[] args){
         System.out.println("Hello world!");
@@ -34,23 +36,30 @@ public class Demo {
         System.out.println("chu vi = "+t.chuVi());
         System.out.println("dien tich = "+t.dienTich());
 
+        Scanner ps = new Scanner(System.in);
+
         BaiTap1 bt = new BaiTap1();
-        bt.setMauSo(20);
-        bt.setTuSo(4);
+        bt.setTuSo(ps.nextInt());
+        bt.setMauSo(ps.nextInt());
         bt.rutGon();
+
         bt.inPhanSo();
 
 
         BaiTap1 bt1 = new BaiTap1();
-        bt1.setMauSo(8);
-        bt1.setTuSo(4);
+        bt1.setTuSo(ps.nextInt());
+        bt1.setMauSo(ps.nextInt());
         bt1.rutGon();
         bt1.inPhanSo();
 
         BaiTap1 tong = bt.add(bt1);
         tong.rutGon();
+        tong.nghichDao();
         tong.inPhanSo();
 
+        BaiTap1 hieu = bt.sub(bt1);
+        hieu.rutGon();
+        hieu.inPhanSo();
 
 
     }
