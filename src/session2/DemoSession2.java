@@ -1,5 +1,7 @@
 package session2;
 
+import session1.Car;
+
 import java.util.Scanner;
 
 public class DemoSession2 {
@@ -24,7 +26,7 @@ public class DemoSession2 {
         System.out.println(s.address);
         System.out.println(s.age);
 
-        Student s1 = new Student("Ha Hoang Hung","0916389812","Bac Kan",20);
+        Student s1 = new Student("Ha Hoang Hung","0916389812","Bac Kan",20,new Car());
         System.out.println(s1.name);
         System.out.println(s1.tel);
         System.out.println(s1.address);
