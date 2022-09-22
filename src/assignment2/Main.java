@@ -18,7 +18,11 @@ public class Main {
 
         System.out.println(kh4.thanhTien());
 
-        KhachHangNuocNgoai nn1 = new KhachHangNuocNgoai(3,"jonh",30,9,2022,"kinh doan",200,1000,2000,"American");
+        KhachHangNuocNgoai nn1 = new KhachHangNuocNgoai(3,"jonh",30,9,2022,"kinh doan",200,1000,50,"American");
         System.out.println(nn1.thanhTien());
+
+
+
+
     }
 }
