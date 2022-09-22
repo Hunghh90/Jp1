@@ -5,18 +5,16 @@ import java.util.ArrayList;
 public class PhoneNumber{
 
     String name;
-    public String phone;
+    ArrayList<String> phone;
 
     public PhoneNumber() {
+        phone=new ArrayList<String>();
     }
 
-    public PhoneNumber(String phone) {
-        this.phone = phone;
-    }
-
-    public PhoneNumber(String name,String phone) {
+    public PhoneNumber(String name) {
         this.name = name;
-        this.phone = phone;
+        phone = new ArrayList<String>();
+
     }
 
     public String getName() {
@@ -27,11 +25,11 @@ public class PhoneNumber{
         this.name = name;
     }
 
-    public String getPhone() {
+    public ArrayList<String> getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(ArrayList<String> phone) {
         this.phone = phone;
     }
 }
