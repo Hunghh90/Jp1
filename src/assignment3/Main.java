@@ -30,6 +30,8 @@ public class Main {
                 System.out.println(fonelist.phoneList.get(i).name);
                 System.out.println(fonelist.phoneList.get(i).phone);
             }
-        fonelist.searchPhone("Hung1");
+        fonelist.searchPhone("long");
+
+
         }
 }
