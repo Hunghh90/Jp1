@@ -85,7 +85,7 @@ public class News implements INews{
     }
 
     public void Calculate(){
-        int c = 0;
+        float c = 0;
      for(int r : rateList)  {
          c+=r;
      }
