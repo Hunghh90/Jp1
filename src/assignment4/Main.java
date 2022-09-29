@@ -6,7 +6,7 @@ public class Main {
         n.rateList[0] = 1;
         n.rateList[1] = 4;
         n.rateList[2] = 6;
-        n.Calculate();
-        n.Display();
+        n.Calculate().Display();
+
     }
 }

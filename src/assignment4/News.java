@@ -84,11 +84,12 @@ public class News implements INews{
     System.out.println(getAverageRate());
     }
 
-    public void Calculate(){
+    public News Calculate(){
         float c = 0;
      for(int r : rateList)  {
          c+=r;
      }
      this.averageRate = c/3;
+     return this;
     }
 }
