@@ -8,7 +8,7 @@ public class News implements INews{
     public String author;
     public String content;
     public float averageRate;
-    public int[] rateList ;
+    public int[] rateList = new int[3]; ;
 
     public News() {
     }
@@ -20,7 +20,7 @@ public class News implements INews{
         this.author = author;
         this.content = content;
         this.averageRate = averageRate;
-        rateList = new int[3];
+
     }
 
     public int getId() {
