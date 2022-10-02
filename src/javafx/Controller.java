@@ -1,7 +1,11 @@
 package javafx;
 
+import assignment3.PhoneNumber;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+
+import java.util.ArrayList;
 
 public class Controller {
 
@@ -19,6 +23,13 @@ public class Controller {
     public Text nEmail;
     public Text nAge;
     public Text nAddress;
+
+    public TextField txtName;
+    public TextField txtPhoneNumber;
+    public TextArea txtPhoneList;
+
+    public Text nName;
+    public Text nPhoneNumber;
 
     public void handleSubmit(){
         String fn = txtFullName.getText();
@@ -59,6 +70,19 @@ public class Controller {
         }else {
             tAddress.setText(ad);
             nAddress.setVisible(false);
+        }
+    }
+
+    public void addPhone(){
+        ArrayList<PhoneNumber> pl =  new ArrayList<>();
+        String name = txtName.getText();
+        if(name.isEmpty()){
+            nName.setText("Nhap ten");
+            nName.setVisible(true);
+        }else{
+            for(PhoneNumber pl1 : pl ){
+                if()
+            }
         }
     }
 
