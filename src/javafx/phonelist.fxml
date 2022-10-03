@@ -5,14 +5,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="javafx.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.Controller">
    <children>
       <TextField fx:id="txtName" layoutX="40.0" layoutY="40.0" />
       <TextField fx:id="txtPhoneNumber" layoutX="40.0" layoutY="91.0" />
       <Text fx:id="nName" fill="#e80606" layoutX="40.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
       <Text fx:id="nPhoneNumber" fill="#f20707" layoutX="40.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
-      <Button onAction="#addPhone" layoutX="40.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Button" />
-      <TextArea fx:id="txtPhoneList" layoutX="300.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="40.0" layoutY="133.0" mnemonicParsing="false" onAction="#addPhone" prefHeight="25.0" prefWidth="149.0" text="Button" />
+      <ListView fx:id="lv" layoutX="281.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </Pane>

@@ -1,6 +1,9 @@
 package javafx;
 
-import assignment3.PhoneNumber;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -26,7 +29,7 @@ public class Controller {
 
     public TextField txtName;
     public TextField txtPhoneNumber;
-    public TextArea txtPhoneList;
+    public ListView<PhoneNumber> lv;
 
     public Text nName;
     public Text nPhoneNumber;
@@ -73,19 +76,45 @@ public class Controller {
         }
     }
 
+    private ObservableList<PhoneNumber> phoneList = FXCollections.observableArrayList();
+
     public void addPhone(){
-        ArrayList<PhoneNumber> pl =  new ArrayList<>();
-        String name = txtName.getText();
-        if(name.isEmpty()){
-            nName.setText("Nhap ten");
-            nName.setVisible(true);
-        }else{
-            for(PhoneNumber pl1 : pl ){
-                if()
+        try{
+            nName.setVisible(false);
+            nPhoneNumber.setVisible(false);
+            if(txtName.getText().isEmpty() || txtPhoneNumber.getText().isEmpty()){
+                throw new Exception("Nhap day du thong tin");
             }
+           // phoneList.add(new PhoneNumber(txtName.getText(),txtPhoneNumber.getText()));
+            updatePhone();
+            printContact();
+        }catch (Exception e){
+            nName.setText(e.getMessage());
+            nName.setVisible(true);
+            nPhoneNumber.setText(e.getMessage());
+            nPhoneNumber.setVisible(true);
         }
+
     }
 
+    public void updatePhone(){
+        for(PhoneNumber p:phoneList){
+            if(p.getName().equals(txtName.getText())){
+                if(!p.getPhone().equals(txtPhoneNumber.getText())){
+                    p.setPhone(txtPhoneNumber.getText());
+                    return;
+                }
+                return;
+            }
+        }
+        phoneList.add(new PhoneNumber(txtName.getText(),txtPhoneNumber.getText()));
+    }
+
+    public void printContact(){
+
+        lv.setItems(phoneList);
+        lv.refresh();
+    }
 
 
 }
