@@ -8,12 +8,12 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.StudensController">
    <children>
       <TextField fx:id="txtFullName" layoutX="55.0" layoutY="58.0" promptText="name" />
-      <TextField fx:id="txtEmail" layoutX="55.0" layoutY="110.0" promptText="email" />
+      <TextField fx:id="txtEmails" layoutX="55.0" layoutY="110.0" promptText="email" />
       <TextField fx:id="txtMark" layoutX="55.0" layoutY="161.0" promptText="mark" />
       <ListView fx:id="studentList" layoutX="300.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="103.0" layoutY="208.0" mnemonicParsing="false" onAction="#addStudent" text="Submit" />
-      <Button  layoutX="300.0" layoutY="21.0" mnemonicParsing="false" text="Sort Name" />
-      <Button  layoutX="432.0" layoutY="21.0" mnemonicParsing="false" text="Sort Mark" />
+      <Button onAction="#sortName" layoutX="300.0" layoutY="21.0" mnemonicParsing="false" text="Sort Name" />
+      <Button  onAction="#sortMark" layoutX="432.0" layoutY="21.0" mnemonicParsing="false" text="Sort Mark" />
       <Text fx:id="errors" fill="#eb0808" layoutX="55.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
 
    </children>

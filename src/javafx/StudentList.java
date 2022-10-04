@@ -37,6 +37,6 @@ public class StudentList {
     }
 
     public String toString(){
-        return getFullName()+getEmail()+getMark()+"\n";
+        return getFullName()+"-"+getEmail()+"-"+getMark()+"\n";
     }
 }
