@@ -8,10 +8,10 @@ public class Main {
 
         Flight f1 = new Flight();
         f1.display();
-        Flight f2 = new Flight(2,"Ha Noi");
+        Flight f2 = new Flight(5,"Ha Noi");
         f2.display();
         Flight f3 =new Flight();
-        f3.destination = "3";
+        f3.number = -5;
         f3.display();
     }
 }
